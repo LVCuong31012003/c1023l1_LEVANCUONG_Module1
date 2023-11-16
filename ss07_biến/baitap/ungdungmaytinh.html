@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh cam tay</title>
+</head>
+<body>
+<form>
+    <h1>
+        <strong>
+            Caculator
+        </strong>
+    </h1>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <br>
+    <button onclick="cong()" >Addition(+)</button>
+    <button onclick="tru()" >Subtraction(-)</button>
+    <button onclick="nhan()" >Multiplication(x)</button>
+    <button onclick="chia()" >Division(/)</button>
+    <p id='result'></p>
+</form>
+</body>
+</html>
+<script>
+    function cong()
+    {
+        let a =+document.getElementById('a').value;
+        let b =+document.getElementById('b').value;
+        document.getElementById('result').innerHTML ='result : ' + (a+b);
+    }
+    function tru()
+    {
+        let a =+document.getElementById('a').value;
+        let b =+document.getElementById('b').value;
+        document.getElementById('result').innerHTML ='result : ' + (a-b);
+    }
+    function nhan()
+    {
+        let a =+document.getElementById('a').value;
+        let b =+document.getElementById('b').value;
+        document.getElementById('result').innerHTML ='result : ' + (a*b);
+    }
+    function chia()
+    {
+        let a =+document.getElementById('a').value;
+        let b =+document.getElementById('b').value;
+        document.getElementById('result').innerHTML ='result : ' + (a/b);
+    }
+</script>
