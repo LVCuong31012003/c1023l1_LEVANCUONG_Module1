@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>chuyển đổi tiền tệ</title>
+    <script>
+        function doiTien()
+        {
+            let amount = document.getElementById("Amount").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("To").value;
+            if (from == 'VND' && to == 'USD') {
+                document.getElementById('result').innerHTML = "result" + (amount / 23000) + "USD";
+            }
+            if (from == 'USD' && to == 'VND') {
+                document.getElementById('result').innerHTML = "result" + (amount * 23000) + "USD";
+            }
+            if (from == to) {
+                document.getElementById('result').innerHTML = "result" + amount + from;
+            }
+        }
+    </script>
 </head>
 <body>
 <form>
@@ -35,31 +52,16 @@
                 </select>
             </td>
             <td>
-                <button onclick="doiTien()">convert</button>
+                <button type="button" onclick="doiTien()">convert</button>
             </td>
         </tr>
         <tr>
-            <div id="result"></div>
+            <td>
+                <p id='result'> result : </p>
+            </td>
+
         </tr>
     </table>
 </form>
 </body>
 </html>
-<script>
-    function doiTien()
-    {
-        let amount = document.getElementById("Amount").value
-        let from = document.getElementById("from").value
-        let to = document.getElementById("To").value
-        let result = document.getElementById("result").value
-        if (from == 'VND' && to == 'USD') {
-            document.getElementById(result).innerHTML = "result" + (amount / 23000) + "USD";
-        }
-        if (from == 'USD' && to == 'VND') {
-            document.getElementById(result).innerHTML = "result" + (amount * 23000) + "USD";
-        }
-        if (from == to) {
-            document.getElementById(result).innerHTML = "result" + from;
-        }
-    }
-</script>
