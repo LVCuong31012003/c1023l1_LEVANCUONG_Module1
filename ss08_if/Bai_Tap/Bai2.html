@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+  <label for="old">Tuổi: </label>
+  <input id="old" type="text">
+  <br>
+  <button onclick="check()" type="button">check</button>
+  <p id="result"></p>
+</form>
+<script>
+  function check()
+  {
+    let old = +document.getElementById("old").value
+    if(old===15)
+    {
+      document.getElementById("result").innerHTML ="đủ tuổi học lớp 10";
+    }
+    else if(old>15)
+    {
+      document.getElementById("result").innerHTML ="đã học qua lớp 10";
+    }
+    else
+    {
+      document.getElementById("result").innerHTML =" không đủ tuổi học lớp 10";
+    }
+  }
+</script>
+</body>
+</html>
