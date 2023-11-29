@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chi7(n){
+        if (n % 7 === 0) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    let sum = 0
+    let dem =0;
+    let stn=7;
+    while(dem<=30) {
+
+        if(chi7(stn)===true){
+            sum=sum+stn;
+            dem++;
+        }
+        stn++;
+    }
+    document.write(sum);
+</script>
+</body>
+</html>
