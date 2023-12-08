@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhap so luong phan tu trong chuoi :  ");
+    let a=[]
+    for(let i=0;i<n;i++){
+        a[i]= +prompt("nhap so thu " + (i+1) + " : ");
+    }
+    let k = +prompt("nhap so can tim de xoa  :  ");
+    let dem=0;
+    for(let i =0 ;i <n;i++) {
+        if (a[i] === k) {
+            break;
+        }
+        dem++;
+    }
+    for(let h=dem;h<(n-1);h++){
+        a[h]=a[h+1];
+    }
+    for(let i =0 ;i <(n-1);i++)
+    {
+            document.write(a[i])
+            document.write("<br>")
+    }
+</script>
+</body>
+</html>

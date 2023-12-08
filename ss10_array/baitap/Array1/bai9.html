@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhap so luong phan tu trong chuoi 1 :  ");
+    let a = []
+    for (let i = 0; i < n; i++) {
+        a[i] = +prompt("nhap so thu " + (i + 1) + " : ");
+    }
+    let h = +prompt("nhap so luong phan tu trong chuoi 2 :  ");
+    let b = []
+    for (let i = 0; i < h; i++) {
+        b[i] = +prompt("nhap so thu " + (i + 1) + " : ");
+    }
+    console.log(a, b)
+    let c = [...a, ...b]
+    let i = 0
+    // for (let j = 0; j < a.length; j++) {
+    //     c.push(a[j]);
+    // }
+    // for (let j = 0; j < b.length; j++) {
+    //     c.push(b[j]);
+    // }
+    // while (i < (h + n)) {
+    //     for (let j = 0; j < n; j++) {
+    //         c[i] = a[j];
+    //         i++;
+    //     }
+    //     for (let k = 0; k < h; k++) {
+    //         c[i + 1] = b[k];
+    //         i++;
+    //     }
+    // }
+    for (let i = 0; i < c.length; i++) {
+        document.write(c[i])
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>

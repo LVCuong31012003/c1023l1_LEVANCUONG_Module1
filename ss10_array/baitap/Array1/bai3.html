@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum=0;
+    let count =0;
+    let a=[]
+    for(let i=0;i<10;i++){
+        a[i]= +prompt("nhap so thu " + (i+1) + " : ");
+    }
+    let max =0;
+    for(let i=0;i<10;i++){
+        sum=sum+a[i]
+        count++;
+        if(a[i]>=max){
+            max=a[i];
+        }
+    }
+    document.write("max : " + max +  "; TB = " + (sum/count))
+</script>
+</body>
+</html>
