@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = +prompt("nhap so luong phan tu trong chuoi a :  ");
+  let a=[]
+  for(let i=0;i<n;i++){
+    a[i]= +prompt("nhap so thu " + (i+1) + " : ");
+  }
+  let nn = +prompt("nhap so luong phan tu trong chuoi b :  ");
+  let b=[]
+  for(let i=0;i<nn;i++){
+    b[i]= +prompt("nhap so thu " + (i+1) + " : ");
+  }
+  let missValue=[]
+  for (let i = 0 ; i < b.length ; i++) {
+    if (!a.includes(b[i])) {
+      missValue.push(b[i])
+    }
+  }
+
+  document.write("mảng Value : ");
+  for(let i =0 ;i <missValue.length;i++)
+  {
+    document.write(missValue[i]+"  ");
+  }
+</script>
+</body>
+</html>
