@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H1>CHƯƠNG TRÌNH TÍNH TIỀN LƯƠNG NHÂN VIÊN</H1>
+<label for="Luong">Nhập Lương</label>
+<input type="text" id="Luong" placeholder="Nhập Lương" >
+<button onclick="Tinh()">Tính</button>
+<p id="result"></p>
+</body>
+<script>
+    function Tinh(){
+        let tienLuong =  +document.getElementById("Luong").value
+        if(tienLuong<7000000){
+            document.getElementById("result").innerHTML ="Lương : " +(tienLuong-(tienLuong*0.05)) +", Tiền thuế thu nhập : "+ (tienLuong*0.05);
+        }
+        else if(tienLuong<=15000000){
+            document.getElementById("result").innerHTML ="Lương : " +(tienLuong-(tienLuong*0.1)) +", Tiền thuế thu nhập : "+ (tienLuong*0.1);
+        }
+        else if(tienLuong >15000000) {
+            document.getElementById("result").innerHTML = "Lương : " + (tienLuong - (tienLuong * 0.2)) + ", Tiền thuế thu nhập : " + (tienLuong * 0.2);
+        }
+    }
+</script>
+</html>

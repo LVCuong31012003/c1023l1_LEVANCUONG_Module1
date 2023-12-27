@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra ký tự là phụ âm hoặc nguyên âm</h1>
+<label for="kyTu">Nhap ký tự : </label>
+<input type="text" id="kyTu" placeholder="Nhap ky tu chu cai" >
+<button onclick="check()" >Check </button>
+<p id="result"></p>
+</body>
+<script>
+    function check(){
+        let char = document.getElementById("kyTu").value;
+        if(char === "o" || char === "u" || char === "i" || char === "a" ||
+            char === "e" || char === "O" || char === "U" || char === "I" ||
+            char === "A" || char === "E" ){
+            document.getElementById("result").innerHTML = "là 1 nguyên âm";
+        }
+        else{
+            document.getElementById("result").innerHTML = "là 1 phụ âm";
+        }
+    }
+</script>
+</html>
