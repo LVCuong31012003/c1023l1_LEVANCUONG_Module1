@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function inMenu(){
+    let menu=["cafe","cam vắt","nước ép cà rốt","nước ép cà chua","nước lọc","nước dừa"]
+    for(let i=0;i<6;i++){
+      document.write((i+1)+"."+menu[i] )  ;
+    }
+    document.write("7.thoát chương trình");
+  }
+  let tienThanhToan=0;
+  while(true) {
+    alert("menu :  " +
+            "1.cafe có giá 20k  " +
+            "2.nước cam có giá 15k  " +
+            "3.nước ép cà rốt 16k  " +
+            "4.nước ép cà chua có giá 10k   " +
+            "5.cafe có giá 20  " +
+            "6.nước lọc có giá 7k  " +
+            "7.thoát khỏi chương trình   ")
+    let c = +prompt("nhập số gọi món");
+    if(c===1)
+    {
+      alert("<br>cafe có giá 20k");
+        tienThanhToan = tienThanhToan + 20000000;
+    }
+    else if(c===2)
+    {
+      alert(" <br>nước cam có giá 15k");
+        tienThanhToan = tienThanhToan + 15000000;
+    }
+    else if(c===3)
+    {
+      alert(" <br>nước ép cà rốt 16k");
+        tienThanhToan = tienThanhToan + 16000000;
+    }
+    else if(c===4)
+    {
+      alert(" <br>nước ép cà chua có giá 10k");
+        tienThanhToan = tienThanhToan + 10000000;
+    }
+
+    else if(c===5)
+    {
+      alert("<br>cafe có giá 20k");
+        tienThanhToan = tienThanhToan + 20000000;
+    }
+
+    else if(c===6)
+    {
+      alert("<br>nước lọc có giá 7k");
+        tienThanhToan = tienThanhToan + 7000000;
+      }
+    else if(c===7)
+    {
+      alert("<br>Hẹn gặp quý khách");
+        break;
+    }
+    else{
+      alert("<br>0 có món này vui lòng nhập lại");
+    }
+
+  }
+  document.write("<br>  Tổng tiền cần thanh toán: "+tienThanhToan);
+
+
+
+</script>
+</body>
+</html>
